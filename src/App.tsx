@@ -1,12 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import PaginaBaseAdmin from './paginas/Administracao/PaginaBaseAdmin';
-import AdministracaoPratos from './paginas/Administracao/Pratos/AdministracaoPratos';
-import FormularioPrato from './paginas/Administracao/Pratos/FormularioPrato';
-import AdministracaoRestaurantes from './paginas/Administracao/Restaurantes/AdministracaoRestaurantes';
-import FormularioRestaurante from './paginas/Administracao/Restaurantes/FormularioRestaurante';
 import Home from './paginas/Home';
 import VitrineRestaurantes from './paginas/VitrineRestaurantes';
 import Login from './paginas/login';
+import { AdministracaoCursos } from './paginas/Administracao/cursos/AdministracaoCursos';
+import { FormularioCursos } from './paginas/Administracao/cursos/FormularioCursos';
+import { AdministracaoProfessores } from './paginas/Administracao/professor/AdministracaoProfessores';
+import { FormularioProfessor } from './paginas/Administracao/professor/FormularioProfessor';
+import { AdministracaoAlunos } from './paginas/Administracao/aluno/AdministracaoAlunos';
+import { FormularioAluno } from './paginas/Administracao/aluno/FormularioAluno';
+import { AdministracaoCoordenadores } from './paginas/Administracao/coordenador/AdministracaoCoordenadores';
+import { FormularioCoordenador } from './paginas/Administracao/coordenador/FormularioCoordenador';
 
 function App() {
 
@@ -18,18 +22,21 @@ function App() {
 
       <Route path='/admin' element={<PaginaBaseAdmin />}>
 
-        <Route path="cursos" element={<AdministracaoRestaurantes />} />
-        <Route path="cursos/novo" element={<FormularioRestaurante />} />
-        <Route path="cursos/:id" element={<FormularioRestaurante />} />
+        <Route path="cursos" element={<AdministracaoCursos />} />
+        <Route path="cursos/novo" element={<FormularioCursos />} />
+        <Route path="cursos/:id" element={<FormularioCursos />} />
 
-        <Route path="professores" element={<AdministracaoPratos />} />
-        <Route path="professores/novo" element={<FormularioPrato />} />
+        <Route path="professores" element={<AdministracaoProfessores />} />
+        <Route path="professores/novo" element={<FormularioProfessor />} />
+        <Route path="professores/:id" element={<FormularioProfessor />} />
 
-        <Route path="alunos" element={<AdministracaoPratos />} />
-        <Route path="alunos/novo" element={<FormularioPrato />} />
+        <Route path="alunos" element={<AdministracaoAlunos />} />
+        <Route path="alunos/novo" element={<FormularioAluno />} />
+        <Route path="alunos/:id" element={<FormularioAluno />} />
 
-        <Route path="coordenadores" element={<AdministracaoPratos />} />
-        <Route path="coordenadores/novo" element={<FormularioPrato />} />
+        <Route path="coordenadores" element={<AdministracaoCoordenadores />} />
+        <Route path="coordenadores/novo" element={<FormularioCoordenador />} />
+        <Route path="coordenadores/:id" element={<FormularioCoordenador />} />
       </Route>
 
     </Routes>

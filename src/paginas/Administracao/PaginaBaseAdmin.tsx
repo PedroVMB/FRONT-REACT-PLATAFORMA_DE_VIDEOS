@@ -13,44 +13,44 @@ const PaginaBaseAdmin = () => {
                         </Typography>
                         <Box sx={{ display: 'flex', flexGrow: 1 }}>
                             <Link component={RouterLink} to="/admin/alunos">
-                                <Button sx={{ my: 2, color: 'white' }}>
+                                <Button sx={{ my: 2, color: 'white' }} >
                                     Alunos
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/alunos/novo">
-                                <Button sx={{ my: 2, color: 'white' }}>
+                                <Button sx={{ my: 2, color: 'Yellow' }}>
                                     Novo Aluno
                                 </Button>
                             </Link>
 
-                            <Link component={RouterLink} to="/professores/pratos">
+                            <Link component={RouterLink} to="/admin/professores">
                                 <Button sx={{ my: 2, color: 'white' }}>
                                     Professores
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/professores/novo">
-                                <Button sx={{ my: 2, color: 'white' }}>
+                                <Button sx={{ my: 2, color: 'Yellow' }}>
                                     Novo Professor
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/cursos">
                                 <Button sx={{ my: 2, color: 'white' }}>
-                                    Coordenadores
+                                    Curso
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/cursos/novo">
-                                <Button sx={{ my: 2, color: 'white' }}>
-                                    Novo Coordenador
+                                <Button sx={{ my: 2, color: 'Yellow' }}>
+                                    Novo Curso
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/coordenadores">
                                 <Button sx={{ my: 2, color: 'white' }}>
-                                    Cursos
+                                Coordenadores
                                 </Button>
                             </Link>
                             <Link component={RouterLink} to="/admin/coordenadores/novo">
-                                <Button sx={{ my: 2, color: 'white' }}>
-                                    Novo Curso
+                                <Button sx={{ my: 2, color: 'Yellow' }}>
+                                    Novo Coordenador
                                 </Button>
                             </Link>
                         </Box>
