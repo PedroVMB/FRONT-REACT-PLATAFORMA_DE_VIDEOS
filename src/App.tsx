@@ -9,8 +9,8 @@ import { AdministracaoProfessores } from './paginas/Administracao/professor/Admi
 import { FormularioProfessor } from './paginas/Administracao/professor/FormularioProfessor';
 import { AdministracaoAlunos } from './paginas/Administracao/aluno/AdministracaoAlunos';
 import { FormularioAluno } from './paginas/Administracao/aluno/FormularioAluno';
-import { AdministracaoCoordenadores } from './paginas/Administracao/coordenador/AdministracaoCoordenadores';
 import { FormularioCoordenador } from './paginas/Administracao/coordenador/FormularioCoordenador';
+import AdministracaoCoordenadores2 from './paginas/Administracao/coordenador/AdministracaoCoordenadores2';
 
 function App() {
 
@@ -34,9 +34,10 @@ function App() {
         <Route path="alunos/novo" element={<FormularioAluno />} />
         <Route path="alunos/:id" element={<FormularioAluno />} />
 
-        <Route path="coordenadores" element={<AdministracaoCoordenadores />} />
+        <Route path="coordenadores" element={<AdministracaoCoordenadores2 />} />
         <Route path="coordenadores/novo" element={<FormularioCoordenador />} />
         <Route path="coordenadores/:id" element={<FormularioCoordenador />} />
+        
       </Route>
 
     </Routes>
