@@ -1,5 +1,5 @@
 export interface ICurso {
-    id: number,
+    id?: number,
     titulo: string, 
     url: string,
 }

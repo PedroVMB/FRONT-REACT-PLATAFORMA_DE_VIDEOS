@@ -40,8 +40,8 @@ function App() {
         </div>
       </div>
       <div className={estilos.Links}>
-        <h3>Conheça os melhores cursos</h3>
-        <p>Clique <Link to='/cursos'>aqui</Link></p>
+        <h3>Se você já é nosso aluno</h3>
+        <p>Clique <Link to='/login'>aqui</Link></p>
       </div>
       <Rodape />
     </>

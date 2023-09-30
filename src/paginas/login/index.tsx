@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importe useNavigate
 import estilos from "./Login.module.scss";
 import NavBar from "../../componentes/NavBar";
 import Rodape from '../../componentes/Rodape';
@@ -7,13 +8,23 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
+  const navigate = useNavigate(); // Use useNavigate para obter uma função de navegação
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    
     // Aqui você pode adicionar a lógica de autenticação
-    if (email === "seu_email@example.com" && password === "sua_senha") {
+    if ((email === "professor@teste.com" && password === "professor") || (email === "coordenador@teste.com" && password === "coordenador")) { // Use as credenciais corretas
       setLoggedIn(true);
       alert("Login bem-sucedido!");
+      
+      // Redirecione o usuário para a rota '/admin' após o login bem-sucedido
+      navigate("/admin/cursos");
+    } else if (email === "aluno@teste.com" && password === "aluno")  {
+      setLoggedIn(true);
+      alert("Login bem-sucedido!");
+
+      navigate("/cursos")
     } else {
       alert("Email ou senha incorretos. Tente novamente.");
     }

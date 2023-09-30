@@ -1,27 +1,38 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import IPrato from '../../../interfaces/IPrato';
-import IRestaurante from '../../../interfaces/IRestaurante';
+import { ICurso } from '../../../interfaces/ICurso';
 
-interface RestauranteProps {
-  restaurante: IRestaurante
+interface CursoProps {
+  curso: ICurso
 }
 
-const Restaurante = ({ restaurante }: RestauranteProps) => {
+const Curso = ({ curso }: CursoProps) => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [pratos, setPratos] = useState<IPrato[]>()
+  const [cursos, setCursos] = useState<ICurso[]>()
   useEffect(() => {
-    axios.get<IPrato[]>(`http://localhost:8000/api/v1/restaurantes/${restaurante.id}/pratos/`)
+    axios.get<ICurso[]>(`http://localhost:3333/video`)
       .then(resposta => {
-        setPratos(resposta.data)
+        setCursos(resposta.data)
       })
-  }, [restaurante.id])
+  }, [curso.id])
 
-  return (<section >
-    <div>
-      <h2>{restaurante.nome}</h2>
-    </div>
-  </section>)
+  return (
+    <section>
+      <div>
+        <h2>{curso.titulo}</h2>
+        <iframe
+          width="560"
+          height="315"
+          frameBorder="0" 
+          src={curso.url} 
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; 
+                 encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen 
+        ></iframe>
+      </div>
+    </section>
+  )
 }
 
-export default Restaurante
+export default Curso
